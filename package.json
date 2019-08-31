@@ -1,7 +1,12 @@
 {
   "name": "schematest",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "lib/index.js",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/supernovus/schematest.js.git"
+  },
   "dependencies": {
     "ajv": "^6.0.0",
     "tap": "^13.0.0"
