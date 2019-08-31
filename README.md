@@ -6,7 +6,7 @@ A quick Javscript library designed for Node.js that can test XML and JSON
 files against formal Schema and based on the validation status run callbacks.
 
 It uses the Ajv JSON Schema validator for JSON, and the xmllint command line
-tool for XML.
+tool for XML (which supports XML Schema and RELAX NG.)
 
 ## Requirements
 
@@ -77,8 +77,19 @@ let testxml = new TestXML(
 let tests =
 {
   test1:
-  {
-    schemaFile: 'document.xml',
+  { // Test using XML Schema (the default).
+    schemaFile: 'document.xsd',
+    files:
+    {
+      'valid_document.xml': true,
+      'invalid_document.xml': false,
+      // More files here.
+    },
+  },
+  test2:
+  { // Test using RELAX NG.
+    relax: true,
+    schemaFile: 'document.rng',
     files:
     {
       'valid_document.xml': true,
