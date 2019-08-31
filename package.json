@@ -1,0 +1,13 @@
+{
+  "name": "schematest",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "dependencies": {
+    "ajv": "^6.0.0",
+    "tap": "^13.0.0"
+  },
+  "scripts":
+  {
+    "build-docs": "jsdoc -c .jsdoc.json -d docs README.md lib/*.js"
+  }
+}

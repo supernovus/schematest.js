@@ -1,0 +1,9 @@
+{
+  "id": "36cac2d4-19be-4d49-8e99-15018e0b69fa",
+  "name": "Document with docref children",
+  "children":
+  [
+    {"idref":"5e38f00e-a180-4f30-a667-3c3bd879ef93"},
+    {"idref":"4b6c12da-351f-402a-a7a8-740aa2b6d841"}
+  ]
+}

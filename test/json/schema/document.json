@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://huri.net/schema/document.json",
+  "title": "Document",
+  "type": "object",
+  "required": ["id","name"],
+  "additionalProperties": false,
+  "properties":
+  {
+    "id":
+    {
+      "type": "string",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
+    },
+    "name": {"type":"string"},
+    "content": {"type":"string"},
+    "children": 
+    {
+      "type":"array", 
+      "items":
+      {
+        "anyOf":
+        [
+          {"$ref": "#"},
+          {"$ref": "http://huri.net/schema/docref.json"}
+        ]
+      }
+    }
+  }
+}

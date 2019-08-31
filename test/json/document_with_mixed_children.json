@@ -1,0 +1,12 @@
+{
+  "id": "5e38f00e-a180-4f30-a667-3c3bd879ef93",
+  "name": "Document with mixed children",
+  "children":
+  [
+    {
+      "id": "93617257-5132-4869-aa4d-07a755bff29f",
+      "name": "Inline child 1"
+    },
+    {"idref":"4b6c12da-351f-402a-a7a8-740aa2b6d841"}
+  ]
+}

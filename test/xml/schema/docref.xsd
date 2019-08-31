@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:include schemaLocation="docid.xsd" />
+
+  <xs:complexType name="DocRefElement">
+    <xs:attribute name="idref" type="DocId" use="required" />
+    <xs:attribute name="id" type="DocId" />
+  </xs:complexType>
+
+</xs:schema>
