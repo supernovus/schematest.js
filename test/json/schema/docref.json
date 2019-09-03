@@ -4,17 +4,9 @@
   "title": "DocRef",
   "type": "object",
   "required": ["idref"],
-  "definitions":
-  {
-    "uuid":
-    {
-      "type": "string",
-      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$"
-    }
-  },
   "properties":
   {
-    "idref": {"$ref": "#/definitions/uuid", "description":"UUID of target document"},
-    "id": {"$ref": "#/definitions/uuid", "description":"Optional UUID to refer to this docref"}
+    "idref": {"type": "string", "format": "uuid", "description":"UUID of target document"},
+    "id": {"type": "string", "format": "uuid", "description":"Optional UUID to refer to this docref"}
   }
 }

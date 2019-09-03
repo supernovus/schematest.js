@@ -6,13 +6,22 @@ let testjson = new TestJSON(
   testPaths: ['./json'],
   schemaPaths: ['./json/schema'],
   preloadSchema: true,
-  onSuccess: function (test, tname, tfile)
+  onSuccess: function (test, tname, tfile, obj)
   {
     console.log(`PASSED [${tname}] ${tfile}`);
   },
-  onFailure: function (test, tname, tfile, err)
+  onFailure: function (test, tname, tfile, obj)
   {
-    console.log(`FAILED [${tname}] ${tfile}`);
+    let logs = [`FAILED [${tname}] ${tfile}`];
+    if (typeof obj !== 'boolean')
+    {
+      logs.push(obj);
+    }
+    if (this.ajv && this.ajv.errors.length > 0)
+    {
+      logs.push(this.ajv.errors);
+    }
+    console.log.apply(console, logs);
   },
 });
 
