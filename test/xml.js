@@ -35,6 +35,7 @@ let tests =
     {
       'valid_docref.xml': true,
       'valid_docref_with_id.xml': true,
+      'docref_with_extra_props.xml': true,
       'docref_without_idref.xml': false,
       'docref_with_invalid_id.xml': false,
       'docref_with_invalid_idref.xml': false
@@ -72,6 +73,7 @@ let tests =
     {
       'valid_docref.xml': true,
       'valid_docref_with_id.xml': true,
+      'docref_with_extra_props.xml': true,
       'docref_without_idref.xml': false,
       'docref_with_invalid_id.xml': false,
       'docref_with_invalid_idref.xml': false
